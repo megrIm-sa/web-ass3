@@ -1,19 +1,19 @@
 var mongoose = require('mongoose');
 var schema = new mongoose.Schema({
-    email: {
+    title: {
         type: String,
         required: true,
         unique: true
     },
-    firstName: {
+    body: {
         type: String,
         default: ''
     },
-    lastName: {
+    author: {
         type: String,
         default: ''
     },
-    phone: String,
+    timestamp: String,
 });
 var user = new mongoose.model('User', schema);
 module.exports = user;
